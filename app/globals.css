@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0a0a0a;
+  --color-foreground: #f5f5f5;
+  --color-surface: #111111;
+  --color-surface-elevated: #1a1a1a;
+  --color-border-custom: #262626;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #2563eb;
+  --color-text-secondary: #a3a3a3;
+  --color-text-muted: #737373;
+  --font-sans: var(--font-ibm-plex);
+  --font-heading: var(--font-bricolage);
+  --font-mono: var(--font-jetbrains);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+/* ─── Orchestrated page-load animation ─── */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes glow-breathe {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(1.04); }
+}
+
+.hero-animate {
+  animation: fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-glow {
+  animation: glow-breathe 7s ease-in-out infinite;
+}
+
+/* ─── Background atmosphere ─── */
+
+.dot-grid {
+  background-image: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.07) 1px,
+    transparent 1px
+  );
+  background-size: 32px 32px;
+}
+
+/* ─── Card interaction ─── */
+
+.card-lift {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 40px rgba(59, 130, 246, 0.06),
+    0 4px 12px rgba(0, 0, 0, 0.4);
+}

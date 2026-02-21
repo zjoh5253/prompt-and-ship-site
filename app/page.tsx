@@ -1,0 +1,29 @@
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Problem from "./components/Problem";
+import Services from "./components/Services";
+import CaseStudy from "./components/CaseStudy";
+import Tools from "./components/Tools";
+import About from "./components/About";
+import Testimonials from "./components/Testimonials";
+import CalendlyEmbed from "./components/CalendlyEmbed";
+import Footer from "./components/Footer";
+
+export default function Home() {
+  return (
+    <>
+      <Navbar />
+      <main id="main">
+        <Hero />
+        <Problem />
+        <Services />
+        <CaseStudy />
+        <Tools />
+        <About />
+        <Testimonials />
+        <CalendlyEmbed />
+      </main>
+      <Footer />
+    </>
+  );
+}

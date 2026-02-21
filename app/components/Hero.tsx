@@ -1,0 +1,72 @@
+"use client";
+
+export default function Hero() {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+      {/* Atmospheric layers */}
+      <div className="absolute inset-0 dot-grid opacity-60" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-blue-500/15 rounded-full blur-[150px] hero-glow pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none" />
+
+      <div className="relative max-w-5xl mx-auto px-6 text-center">
+        {/* Headline — staggered entrance, extreme size */}
+        <h1 className="font-heading font-extrabold tracking-tight mb-8">
+          <span
+            className="hero-animate block text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.95]"
+            style={{ animationDelay: "100ms" }}
+          >
+            From Prompt
+          </span>
+          <span
+            className="hero-animate block text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.95] mt-2"
+            style={{ animationDelay: "280ms" }}
+          >
+            to <span className="text-blue-400">Production</span>
+          </span>
+        </h1>
+
+        {/* Subtitle — light weight for dramatic contrast */}
+        <p
+          className="hero-animate text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-12 leading-relaxed font-light"
+          style={{ animationDelay: "520ms" }}
+        >
+          AI-powered development consulting for teams and builders who want to
+          ship faster.
+        </p>
+
+        {/* CTAs */}
+        <div
+          className="hero-animate flex flex-col sm:flex-row gap-4 justify-center mb-14"
+          style={{ animationDelay: "720ms" }}
+        >
+          <a
+            href="https://calendly.com/promptandship"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-full px-8 py-4 text-lg transition-all hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]"
+          >
+            Book a Free Discovery Call
+          </a>
+          <a
+            href="#services"
+            className="border border-zinc-700 hover:border-blue-500/50 text-zinc-100 font-medium rounded-full px-8 py-4 text-lg transition-all hover:bg-blue-500/5"
+          >
+            See Services
+          </a>
+        </div>
+
+        {/* Proof bar — monospace for data credibility */}
+        <div
+          className="hero-animate font-mono text-sm text-zinc-500 flex flex-wrap justify-center gap-x-6 gap-y-2"
+          style={{ animationDelay: "960ms" }}
+        >
+          <span>Ship 5–10x faster with AI tools</span>
+          <span className="text-zinc-700">/</span>
+          <span>Production-quality code, pen-test proven</span>
+          <span className="text-zinc-700">/</span>
+          <span>Hands-on help with AI tools and workflows</span>
+        </div>
+      </div>
+    </section>
+  );
+}
