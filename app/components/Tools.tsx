@@ -3,15 +3,15 @@
 import { useEffect, useRef, useState } from "react";
 
 const tools = [
-  "Claude Code",
-  "Cursor",
-  "Lovable",
-  "Base44",
-  "OpenClaw",
-  "Replit Agent",
-  "GitHub Copilot",
-  "v0 by Vercel",
-  "Bolt.new",
+  { name: "Claude Code", domain: "claude.ai" },
+  { name: "Cursor", domain: "cursor.com" },
+  { name: "Lovable", domain: "lovable.dev" },
+  { name: "Base44", domain: "base44.com" },
+  { name: "OpenClaw", domain: "openclaw.com" },
+  { name: "Replit Agent", domain: "replit.com" },
+  { name: "GitHub Copilot", domain: "github.com" },
+  { name: "v0 by Vercel", domain: "v0.dev" },
+  { name: "Bolt.new", domain: "bolt.new" },
 ];
 
 export default function Tools() {
@@ -53,8 +53,8 @@ export default function Tools() {
         <div className="flex flex-wrap justify-center gap-3">
           {tools.map((tool, i) => (
             <span
-              key={tool}
-              className={`font-mono text-sm bg-zinc-900/80 border border-zinc-800/80 rounded-xl px-5 py-3 text-zinc-400 hover:border-blue-500/40 hover:text-blue-300 hover:bg-blue-500/5 transition-all cursor-default ${
+              key={tool.name}
+              className={`font-mono text-sm bg-zinc-900/80 border border-zinc-800/80 rounded-xl px-5 py-3 text-zinc-400 hover:border-blue-500/40 hover:text-blue-300 hover:bg-blue-500/5 transition-all cursor-default inline-flex items-center gap-2.5 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-4"
@@ -64,7 +64,15 @@ export default function Tools() {
                 transitionDuration: "500ms",
               }}
             >
-              {tool}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`https://www.google.com/s2/favicons?domain=${tool.domain}&sz=32`}
+                alt=""
+                width={16}
+                height={16}
+                className="rounded-sm opacity-70 group-hover:opacity-100"
+              />
+              {tool.name}
             </span>
           ))}
         </div>

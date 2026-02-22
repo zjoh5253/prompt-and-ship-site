@@ -72,7 +72,7 @@ export default function CaseStudy() {
           </div>
 
           <p className="text-zinc-400 leading-relaxed max-w-3xl mx-auto text-center text-lg font-light">
-            At Impact Suite, a 2-person dev team built a full K-12 safety
+            At <a href="https://www.impactsuite.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors underline underline-offset-2 decoration-blue-400/30 hover:decoration-blue-300">Impact Suite</a>, a 2-person dev team built a full K-12 safety
             platform in 5 months &mdash; a project that would typically require
             10 engineers and a year. The platform achieved $300K ARR and $3M+
             pipeline by October 2025, serving 20 school districts. It passed a

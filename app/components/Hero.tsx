@@ -55,17 +55,15 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Proof bar — monospace for data credibility */}
-        <div
-          className="hero-animate font-mono text-sm text-zinc-500 flex flex-wrap justify-center gap-x-6 gap-y-2"
+        {/* Value proposition */}
+        <p
+          className="hero-animate text-sm md:text-base text-zinc-500 max-w-2xl mx-auto leading-relaxed text-center"
           style={{ animationDelay: "960ms" }}
         >
-          <span>Ship 5–10x faster with AI tools</span>
-          <span className="text-zinc-700">/</span>
-          <span>Production-quality code, pen-test proven</span>
-          <span className="text-zinc-700">/</span>
-          <span>Hands-on help with AI tools and workflows</span>
-        </div>
+          Software engineering is no longer the bottleneck. You and your team
+          can build and ship 5–10x faster with AI tools. Get started today with
+          hands-on help with AI tools and workflows for individuals and teams.
+        </p>
       </div>
     </section>
   );
