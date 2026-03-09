@@ -13,6 +13,7 @@ const services = [
         duration: "30 min",
         description:
           "Bug triage, deployment fixes, tool setup, quick architecture questions.",
+        href: "https://calendly.com/zach-zachjohnson/quick-hit-session",
       },
       {
         name: "Deep Dive",
@@ -20,9 +21,11 @@ const services = [
         duration: "60 min",
         description:
           "Pair-programming with AI tools, complex debugging, migration planning, architecture reviews.",
+        href: "https://calendly.com/zach-zachjohnson/deep-dive-session",
       },
     ],
     cta: "Book a Session",
+    href: "https://calendly.com/zach-zachjohnson/free-discovery-call",
   },
   {
     title: "Team Onboarding",
@@ -44,6 +47,7 @@ const services = [
       },
     ],
     cta: "Learn More",
+    href: "https://calendly.com/zach-zachjohnson/free-discovery-call",
   },
   {
     title: "Monthly Retainer",
@@ -65,6 +69,7 @@ const services = [
       },
     ],
     cta: "Get Started",
+    href: "https://calendly.com/zach-zachjohnson/free-discovery-call",
   },
 ];
 
@@ -153,12 +158,22 @@ export default function Services() {
                     <p className="text-sm text-zinc-500 leading-relaxed">
                       {tier.description}
                     </p>
+                    {"href" in tier && tier.href && (
+                      <a
+                        href={tier.href as string}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block mt-3 text-xs font-medium text-blue-400 hover:text-blue-300 transition-colors"
+                      >
+                        Book {tier.name} &rarr;
+                      </a>
+                    )}
                   </div>
                 ))}
               </div>
 
               <a
-                href="https://calendly.com/promptandship"
+                href={service.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 block text-center bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 font-medium rounded-xl px-6 py-3.5 transition-all border border-blue-500/20 hover:border-blue-500/40 hover:shadow-[0_0_20px_rgba(59,130,246,0.1)]"

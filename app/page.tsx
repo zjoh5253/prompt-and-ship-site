@@ -5,7 +5,6 @@ import Services from "./components/Services";
 import CaseStudy from "./components/CaseStudy";
 import Tools from "./components/Tools";
 import About from "./components/About";
-import Testimonials from "./components/Testimonials";
 import CalendlyEmbed from "./components/CalendlyEmbed";
 import Footer from "./components/Footer";
 
@@ -20,7 +19,8 @@ export default function Home() {
         <CaseStudy />
         <Tools />
         <About />
-        <Testimonials />
+        {/* TODO: Re-enable once real testimonials are collected */}
+        {/* <Testimonials /> */}
         <CalendlyEmbed />
       </main>
       <Footer />

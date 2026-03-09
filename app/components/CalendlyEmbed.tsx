@@ -32,7 +32,7 @@ export default function CalendlyEmbed() {
         </p>
         <div
           className="calendly-inline-widget rounded-2xl overflow-hidden border border-zinc-800/40"
-          data-url="https://calendly.com/promptandship?hide_gdpr_banner=1&background_color=111111&text_color=f5f5f5&primary_color=3b82f6"
+          data-url="https://calendly.com/zach-zachjohnson/free-discovery-call?hide_gdpr_banner=1&background_color=111111&text_color=f5f5f5&primary_color=3b82f6"
           style={{ minWidth: "320px", height: "700px" }}
         />
       </div>

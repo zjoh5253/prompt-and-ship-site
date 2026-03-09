@@ -40,7 +40,7 @@ export default function Hero() {
           style={{ animationDelay: "720ms" }}
         >
           <a
-            href="https://calendly.com/promptandship"
+            href="https://calendly.com/zach-zachjohnson/free-discovery-call"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-full px-8 py-4 text-lg transition-all hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]"
